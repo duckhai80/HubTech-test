@@ -1,0 +1,148 @@
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6rem;
+  box-sizing: border-box;
+}
+
+.carousel__container {
+  position: relative;
+  width: 1098px;
+  margin: auto;
+}
+
+.carousel__container:hover .arrow {
+  display: block;
+}
+
+.carousel__slider {
+  display: flex;
+  overflow: hidden;
+  width: 1122px;
+}
+
+.ticket {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 2.4rem;
+  width: 358px !important;
+  height: 120px;
+  border-radius: 6px;
+  background-color: #fcdbd0;
+}
+
+.ticket__info {
+  position: relative;
+  flex: 1;
+  width: 230px;
+  padding: 1.8rem;
+  border-right: 1px dotted #f04a15;
+}
+
+.ticket__info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid white;
+  transform: translateX(52%);
+}
+
+.ticket__info::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white;
+  transform: translateX(52%);
+}
+
+.ticket__info__title {
+  margin-bottom: 0.6rem;
+  color: #f04a15;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.6rem;
+  line-height: 26px;
+}
+
+.ticket__info__expire {
+  color: #595959;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 26px;
+}
+
+.ticket__save {
+  padding: 0 2rem;
+}
+
+.ticket__save button {
+  height: 40px;
+  min-width: 80px;
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  background-color: #f04a15;
+  color: white;
+  font-family: "Open Sans";
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 26px;
+}
+
+.arrow {
+  display: none;
+}
+
+#previousBtn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f04a15;
+  font-size: 2rem;
+  color: white;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
+
+#nextBtn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #f04a15;
+  font-size: 2rem;
+  color: white;
+  transform: translate(50%, -50%);
+  z-index: 10;
+  cursor: pointer;
+}
